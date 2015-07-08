@@ -1,3 +1,6 @@
 [submodule "api"]
 	path = api
 	url = git@bitbucket.org:fou-fashion/api.git
+[submodule "assets"]
+	path = assets
+	url = git@bitbucket.org:fou-fashion/assets.git
