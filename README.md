@@ -24,3 +24,11 @@ Launch the app:
 ```bash
 $ docker-compose up -d
 ```
+
+Also do these for your own sanity:
+
+```bash
+$ alias dk=docker
+$ alias dc=docker-compose
+$ alias ma=docker-machine
+```
