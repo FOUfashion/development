@@ -8,7 +8,7 @@ rethinkdb:
 
 api:
   image: iojs
-  command: npm run start
+  command: npm start
   environment:
     - NODE_ENV=development
     - PORT=3000

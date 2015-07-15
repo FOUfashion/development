@@ -32,3 +32,16 @@ $ alias dk=docker
 $ alias dc=docker-compose
 $ alias ma=docker-machine
 ```
+
+## Env vars
+
+```bash
+export NODE_ENV=development
+export PORT=3000
+export HOSTNAME=localhost
+export RETHINKDB_HOST=docker
+export RETHINKDB_PORT=28015
+export RETHINKDB_DB=test
+export CLI_ENABLED=true
+export CLI_PORT=4000
+```
