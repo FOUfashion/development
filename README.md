@@ -30,10 +30,10 @@ $ docker-compose up -d
 Add these entries in `/etc/hosts`:
 
 ```
-<docker ip> docker
-<docker ip> fou.local
-<docker ip> api.fou.local
-<docker ip> rethinkdb.fou.local
+<docker-ip> docker
+<docker-ip> fou.local
+<docker-ip> api.fou.local
+<docker-ip> rethinkdb.fou.local
 ```
 
 ## Extra
