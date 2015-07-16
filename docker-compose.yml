@@ -15,7 +15,7 @@ api:
     - HOSTNAME=0.0.0.0
     - RETHINKDB_HOST=rethinkdb
     - RETHINKDB_PORT=28015
-    - RETHINKDB_DB=test
+    - RETHINKDB_DB=dev
     - NPM_CONFIG_LOGLEVEL=http
     - CLI_ENABLED=true
     - CLI_PORT=4000
