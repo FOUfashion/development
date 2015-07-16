@@ -2,7 +2,7 @@
 
 This is a Docker Compose app with all the services imported as submodules. It helps developers get up and running fast.
 
-## Get started
+## Init
 
 Make sure you have these intalled:
 
@@ -19,11 +19,24 @@ $ git submodule init && git submodule update
 $ git submodule foreach npm install
 ```
 
+## Run
+
 Launch the app:
 
 ```bash
 $ docker-compose up -d
 ```
+
+Add these entries in `/etc/hosts`:
+
+```
+<docker ip> docker
+<docker ip> fou.local
+<docker ip> api.fou.local
+<docker ip> rethinkdb.fou.local
+```
+
+## Extra
 
 Also do these for your own sanity:
 
@@ -31,17 +44,4 @@ Also do these for your own sanity:
 $ alias dk=docker
 $ alias dc=docker-compose
 $ alias ma=docker-machine
-```
-
-## Env vars
-
-```bash
-export NODE_ENV=development
-export PORT=3000
-export HOSTNAME=localhost
-export RETHINKDB_HOST=docker
-export RETHINKDB_PORT=28015
-export RETHINKDB_DB=test
-export CLI_ENABLED=true
-export CLI_PORT=4000
 ```
