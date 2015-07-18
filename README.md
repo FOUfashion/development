@@ -4,7 +4,7 @@ This is a Docker Compose app with all the services imported as submodules. It he
 
 ## Init
 
-Make sure you have these intalled:
+Make sure you have these installed:
 
 ```bash
 $ git -v
