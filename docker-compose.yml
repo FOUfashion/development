@@ -11,7 +11,6 @@ api:
   command: npm start
   environment:
     - NODE_ENV=development
-    - PORT=3000
     - HOSTNAME=0.0.0.0
     - RETHINKDB_HOST=rethinkdb
     - RETHINKDB_PORT=28015
@@ -20,7 +19,7 @@ api:
     - CLI_ENABLED=true
     - CLI_PORT=4000
     - VIRTUAL_HOST=api.fou.local
-    - VIRTUAL_PORT=3000
+    - VIRTUAL_PORT=8080
   working_dir: /app
   volumes:
     - ./api:/app
