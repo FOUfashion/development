@@ -16,15 +16,16 @@ api:
   command: npm start
   environment:
     - NODE_ENV=development
-    - HOSTNAME=0.0.0.0
+    - NPM_CONFIG_LOGLEVEL=http
+    - API_PORT=5000
+    - API_HOSTNAME=0.0.0.0
     - RETHINKDB_HOST=rethinkdb
     - RETHINKDB_PORT=28015
     - RETHINKDB_DB=dev
-    - NPM_CONFIG_LOGLEVEL=http
-    - CLI_ENABLED=true
-    - CLI_PORT=4000
+    - API_CLI_ENABLED=true
+    - API_CLI_PORT=4000
     - VIRTUAL_HOST=api.fou.local
-    - VIRTUAL_PORT=8080
+    - VIRTUAL_PORT=5000
   working_dir: /app
   volumes:
     - ./api:/app
@@ -39,17 +40,24 @@ frontend:
   command: npm start
   environment:
     - NODE_ENV=development
-    - PORT=5000
     - NPM_CONFIG_LOGLEVEL=http
+    - FRONTEND_PORT=9090
+    - FRONTEND_HOSTNAME=0.0.0.0
+    - FRONTEND_API_URI=http://api:5000
+    - FRONTEND_API_TOKEN=123
+    - FRONTEND_SESSION_KEYS=1337,007,abc
+    - FRONTEND_REDIS_HOST=redis
+    - FRONTEND_REDIS_PORT=6379
     - VIRTUAL_HOST=fou.local
-    - VIRTUAL_PORT=5000
+    - VIRTUAL_PORT=9090
   working_dir: /app
   volumes:
     - ./frontend:/app
   links:
     - api
+    - redis
   ports:
-    - 5000:5000
+    - 9090:9090
 
 nginx:
   image: jwilder/nginx-proxy
