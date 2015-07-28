@@ -6,6 +6,11 @@ rethinkdb:
   ports:
     - 28015:28015
 
+redis:
+  image: redis
+  ports:
+    - 6379:6379
+
 api:
   image: iojs
   command: npm start
