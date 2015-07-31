@@ -16,7 +16,6 @@ api:
   command: npm start
   environment:
     - NODE_ENV=development
-    - NPM_CONFIG_LOGLEVEL=http
     - API_PORT=5000
     - API_HOSTNAME=0.0.0.0
     - RETHINKDB_HOST=rethinkdb
@@ -42,7 +41,6 @@ frontend:
   command: npm start
   environment:
     - NODE_ENV=development
-    - NPM_CONFIG_LOGLEVEL=http
     - FRONTEND_PORT=9090
     - FRONTEND_HOSTNAME=0.0.0.0
     - FRONTEND_API_URI=http://api:5000
