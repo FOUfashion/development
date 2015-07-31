@@ -18,9 +18,9 @@ api:
     - NODE_ENV=development
     - API_PORT=5000
     - API_HOSTNAME=0.0.0.0
-    - RETHINKDB_HOST=rethinkdb
-    - RETHINKDB_PORT=28015
-    - RETHINKDB_DB=dev
+    - API_RETHINKDB_HOST=rethinkdb
+    - API_RETHINKDB_PORT=28015
+    - API_RETHINKDB_DB=dev
     - API_CLI_ENABLED=true
     - API_CLI_PORT=4000
     - API_CLI_USER=admin
